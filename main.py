@@ -4,11 +4,6 @@ cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 def deal_card():
   return random.choice(cards)
 
-
-
-#Hint 6: Create a function called calculate_score() that takes a List of cards as input 
-#and returns the score. 
-#Look up the sum() function to help you do this.
 def calculate_score(cardlist):
   Sum = sum(cardlist)
   if len(cardlist) == 2 and 11 in cardlist and 10 in cardlist:
@@ -19,16 +14,6 @@ def calculate_score(cardlist):
   else:
     return Sum
 
-
-
-
-
-
-#Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
-
-#Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
-
-#Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
 def compare(user_score, computer_score):
   if computer_score == user_score:
     return "Draw"
